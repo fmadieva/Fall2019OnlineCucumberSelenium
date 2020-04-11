@@ -1,4 +1,4 @@
-package com.vytrack.pages.pages.activities;
+package com.vytrack.pages.activities;
 
 import com.automation.pages.AbstractPageBase;
 import com.automation.utilities.BrowserUtils;

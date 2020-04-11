@@ -1,4 +1,4 @@
-package com.vytrack.pages.pages;
+package com.vytrack.pages;
 
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.ConfigurationReader;

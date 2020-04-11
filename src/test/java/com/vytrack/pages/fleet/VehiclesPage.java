@@ -1,4 +1,4 @@
-package com.vytrack.pages.pages.fleet;
+package com.vytrack.pages.fleet;
 
 import com.automation.pages.AbstractPageBase;
 import org.openqa.selenium.WebElement;
