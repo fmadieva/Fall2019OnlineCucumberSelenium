@@ -1,13 +1,11 @@
 package com.vytrack.pages.activities;
 
-
 import com.vytrack.pages.AbstractPageBase;
 import com.vytrack.utilities.BrowserUtilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.util.List;
 
 public class CalendarEventsPage extends AbstractPageBase {
@@ -129,7 +127,6 @@ public class CalendarEventsPage extends AbstractPageBase {
         return startDate.getAttribute("value");
     }
 }
-
 
 //where we store the web element of current user name locator => in abstractPageBase ; because every page has that webelement
 //owner name locator =>  in calenderEventsPage since it is belong to calender event
