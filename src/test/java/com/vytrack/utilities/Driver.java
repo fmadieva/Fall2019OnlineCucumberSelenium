@@ -1,16 +1,22 @@
 package com.vytrack.utilities;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 public class Driver {
+
     //same for everyone
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+
     //so no one can create object of Driver class
     //everyone should call static getter method instead
     private Driver() {
+
     }
+
     /**synchronized makes method thread safe. It ensures that only 1 thread can use it at the time.
      *
      * Thread safety reduces performance but it makes everything safe.
@@ -47,6 +53,7 @@ public class Driver {
         }
         return driverPool.get();
     }
+
     /**synchronized makes method thread safe. It ensures that only 1 thread can use it at the time.
      *
      * Thread safety reduces performance but it makes everything safe.
@@ -82,6 +89,7 @@ public class Driver {
         }
         return driverPool.get();
     }
+
     public static void closeDriver() {
         if (driverPool != null) {
             driverPool.get().quit();
@@ -89,5 +97,4 @@ public class Driver {
         }
     }
 }
-
 

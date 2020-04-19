@@ -15,7 +15,7 @@ public class LoginStepDefinitions {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         System.out.println("Open login page");
-        String URL = ConfigurationReader.getProperty("qa3");
+        String URL = ConfigurationReader.getProperty("qa1");
         Driver.getDriver().get(URL);
     }
 
@@ -23,7 +23,6 @@ public class LoginStepDefinitions {
     public void user_logs_in_as_a_sales_manager() {
         System.out.println("Login as sales manager");
         loginPage.login("salesmanager110", "UserUser123");
-        throw new io.cucumber.java.PendingException();
     }
 
     @When("user logs in as a store manager")
@@ -56,6 +55,7 @@ public class LoginStepDefinitions {
     @When("user navigates to {string} and {string}")
     public void user_navigates_to_and(String tab, String module) {
         System.out.printf("User clicks on the %s tab and navigates to %s module\n", tab, module);
+        loginPage.navigateTo(tab, module);
     }
 
 }

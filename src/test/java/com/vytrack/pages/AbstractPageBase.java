@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public abstract class AbstractPageBase {
     protected WebDriver driver = Driver.getDriver();
-    protected WebDriverWait wait = new WebDriverWait(driver, 15);
+    protected WebDriverWait wait = new WebDriverWait(driver, 25);
 
     @FindBy(css = "#user-menu > a")
     protected WebElement currentUser;
@@ -32,8 +32,7 @@ public abstract class AbstractPageBase {
 
 
     public String getCurrentUserName(){
-        BrowserUtilities
-                .waitForPageToLoad(10);
+        BrowserUtilities.waitForPageToLoad(10);
         wait.until(ExpectedConditions.visibilityOf(currentUser));
         return currentUser.getText().trim();
     }
@@ -53,8 +52,7 @@ public abstract class AbstractPageBase {
 
         Actions actions = new Actions(driver);
 
-        BrowserUtilities
-                .wait(4);
+        BrowserUtilities.wait(4);
 
         actions.moveToElement(tabElement).
                 pause(2000).
@@ -62,7 +60,6 @@ public abstract class AbstractPageBase {
                 build().perform();
 
         //increase this wait rime if still failing
-        BrowserUtilities
-                .wait(4);
+        BrowserUtilities.wait(4);
     }
 }

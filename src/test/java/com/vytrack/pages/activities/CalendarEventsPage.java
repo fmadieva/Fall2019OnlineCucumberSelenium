@@ -79,7 +79,7 @@ public class CalendarEventsPage extends AbstractPageBase {
         return generalInfoDescription.getText();
     }
 
-//#############################################################
+    //#############################################################
     public List<String> getColumnNames() {
         BrowserUtilities.waitForPageToLoad(20);
         return BrowserUtilities.getTextFromWebElements(columnNames);
