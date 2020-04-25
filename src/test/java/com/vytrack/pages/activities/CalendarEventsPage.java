@@ -74,8 +74,6 @@ public class CalendarEventsPage extends AbstractPageBase {
         driver.switchTo().defaultContent();//exit from the frame
     }
 
-
-
     public String getGeneralInfoTitleText() {
         BrowserUtilities.waitForPageToLoad(20);
         return generalInfoTitle.getText();
@@ -128,6 +126,5 @@ public class CalendarEventsPage extends AbstractPageBase {
         return startDate.getAttribute("value");
     }
 }
-
 //where we store the web element of current user name locator => in abstractPageBase ; because every page has that webelement
 //owner name locator =>  in calenderEventsPage since it is belong to calender event
