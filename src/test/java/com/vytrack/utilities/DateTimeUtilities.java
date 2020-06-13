@@ -40,4 +40,3 @@ public class DateTimeUtilities {
         return ChronoUnit.HOURS.between(startTime, endTime);
     }
 }
-

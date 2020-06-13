@@ -15,7 +15,13 @@ public class LoginStepDefinitions {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         System.out.println("Open login page");
-        String URL = ConfigurationReader.getProperty("qa1");
+        // -Denv=qa1, -Denv=qa2, -Denv=qa3
+        String env = "qa2";
+        if (System.getProperty("env") != null) {
+            env = System.getProperty("env");
+        }
+        String URL = ConfigurationReader.getProperty(env);
+        System.out.println("URL :: " + URL);
         Driver.getDriver().get(URL);
     }
 
@@ -76,9 +82,3 @@ public class LoginStepDefinitions {
     }
 
 }
-
-/*
-Step definitions independent from steps; can be reused by other scenarios as well. Cucumber goes into steps andthen goes to step definitions looks for matching setps.
-Cucumber take step definitions as blocks.
-But for same step 2 different implementation is not possible !!
- */

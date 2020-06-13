@@ -1,4 +1,3 @@
-
 package com.vytrack.runners;
 
 import io.cucumber.junit.Cucumber;
@@ -11,34 +10,15 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         dryRun = false,
         strict = false,
-        tags = "@view_calendar_events",
+        tags = "@login",
         plugin = {
                 "html:target/default-report",
                 "json:target/cucumber1.json",
                 "rerun:target/rerun.txt"
         }
 
-
 )
 public class CucumberRunner {
 
 
 }
-
-
-// //@RunWith => comes from Junit. It allows to have custom test configuration
-////cucumber has it's own flow to run test - during runtime turns into executable test
-////@CucumberOptions => stands for parameterization for test execution
-// 2 mandatory options for CucumberOptions: glue and features:
-////glue => trigger of cucumber test. Runner class needs to know where are step definition and feature file
-////path to step definition, right click on step_definitions - copy from source root
-////features => specifies path to the feature files right click on features - copy from content root
-
-
-
-
-//our framework creates json file, some plugin takes jason file and generates a nice HTML report
-//json looks like plain text, has "properties,values" , arrays,Strings,integers,
-//json object vs java object
-//json object has only properties no method; java object has both properties and methods
-//We add json plugin => "json:target/cucumber.json" => to let it generate by our framework

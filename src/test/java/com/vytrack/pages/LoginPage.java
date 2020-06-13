@@ -77,17 +77,3 @@ public class LoginPage extends AbstractPageBase{
         login(userName, "UserUser123");
     }
 }
-
-//Notes
-
-//PageFactory.initElements(Driver.getDriver(), LoginPage.class);
-// required to put into constructor of every page class
-
-//What is webdriver? --> getDriver()
-// what the page class? --> the name of the class or the keyword this.
-
-// @FindBy(id="submit")
-// id is locator type
-// "submit" is locator's value
-
-

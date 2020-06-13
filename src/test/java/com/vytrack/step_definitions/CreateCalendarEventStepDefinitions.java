@@ -58,6 +58,3 @@ public class CreateCalendarEventStepDefinitions {
         Assert.assertEquals(dataTable.get("title"), calendarEventsPage.getGeneralInfoTitleText());
     }
 }
-
-//step definitions class is not inherits any class or not supposed to be inherited
-//we just create page classes objects, and use their methods in StepDefinitions class

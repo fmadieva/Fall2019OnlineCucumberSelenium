@@ -126,5 +126,3 @@ public class CalendarEventsPage extends AbstractPageBase {
         return startDate.getAttribute("value");
     }
 }
-//where we store the web element of current user name locator => in abstractPageBase ; because every page has that webelement
-//owner name locator =>  in calenderEventsPage since it is belong to calender event
